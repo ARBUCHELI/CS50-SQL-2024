@@ -1,0 +1,46 @@
+# Querying
+----------
+
+* Introduction
+--------------
+Databases (and SQL) are tools that can be used to iteract with, store, and manage information.
+
+Software for organizing information in spreadsheets:
+	. Apple Numbers
+	. Google Sheets
+	. Microsoft Excel
+
+Why are we moving in this course from spreadsheet software to dabatases?
+	. Scale ---> For example to millions of data
+	. Frequency ---> Ability to update the data
+	. Speed ---> Finding a particular piece of information faster than with a spreadsheet.
+
+	. Scale
+	. Frequency
+	. Speed
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* What is a database?
+---------------------
+
+. Database ---> A collection of data organized for creating, reading, updating, and deleting.
+
+. Database Management System ---> Software via which you can interact with a database.
+	. GUI
+	. Terminal
+
+	. MySQL ---------->
+	. Oracle          | ---> More heavier weight but more fully featured.
+	. PostgreSQL ----->	
+	. SQLite ---------> Lighter and allows you to do most of the same work than the others.
+
+	Other Database Management Systems include.
+		. Microsoft Access
+		. MongoDB
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
