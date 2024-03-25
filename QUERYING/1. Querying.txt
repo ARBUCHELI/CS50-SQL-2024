@@ -47,6 +47,71 @@ A language viah which you can create, read, update, and delete data in a databas
 
 Structured Query Language.
 
+Querying ---> 
+Ex: What's the most liked post in our platform?
+    Is our number of daily users growing or shrinking?
+    Which songs are the most like the song a user just played?
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Getting Started with SQLite
+-----------------------------
+VS Code
+SQLite
+
+SQLite can be used in: 
+	. Mobile Apps.
+	. Desktop Apps.
+	. Web Apps.
+
+For opening the database called longlist.db
+
+$sqlite3 longlist.db
+
+* SELECT
+--------
+A way to select some rows in a table inside of my database.
+
+sqlite> SELECT * FROM "longlist"; --> This command selects all the rows from a table.
+
+sqlite> SELECT "title" FROM "longlist"; --> This command selects a particular column from a table.
+
+sqlite> SELECT "title", "author" FROM "longlist"; --> This command selects more than one column.
+
+Good practice: Use double quotes for colum names, and single quotes for string names.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
