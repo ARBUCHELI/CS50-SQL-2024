@@ -41,6 +41,39 @@ Why are we moving in this course from spreadsheet software to dabatases?
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* SQL
+-----
+A language viah which you can create, read, update, and delete data in a database.
+
+Structured Query Language.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
