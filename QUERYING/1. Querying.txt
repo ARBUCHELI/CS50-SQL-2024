@@ -82,6 +82,111 @@ Good practice: Use double quotes for colum names, and single quotes for string n
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* LIMIT
+-------
+sqlite> SELECT "title" FROM "longlist" LIMIT 10;
+
+sqlite> SELECT "title" FROM "longlist" LIMIT 5;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* WHERE
+-------
+Let me retrieve some rows WHERE some condition is true.
+
+Often combined with other conditions.
+
+sqlite> SELECT "title", "author" FROM "longlist" WHERE "year" = 2023;
+
+sqlite> SELECT "title", "format" FROM "longlist" WHERE "format" != 'hardcover';
+
+sqlite> SELECT "title", "format" FROM "longlist" WHERE "format" <> 'hardcover'; ---> <> this symbol also represents not equal !=
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* NOT
+-----
+sqlite> SELECT "title", "format" FROM "longlist" WHERE NOT "format" = 'hardcover';
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* AND, OR, ()
+-------------
+sqlite> SELECT "title", "author" FROM "longlist" WHERE "year" = 2022 OR "year" = 2023;
+
+sqlite> SELECT "title", "format" FROM "longlist" WHERE ("year" = 2022 OR "year" = 2023) AND "format" != 'hardcover';
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* NULL
+------
+This is something that is not being there.
+
+IS NULL
+IS NOT NULL
+
+sqlite> SELECT "title", "translator" FROM "longlist" WHERE "translator" IS NULL;
+
+sqlite> SELECT "title", "translator" FROM "longlist" WHERE "translator" IS NOT NULL;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* LIKE
+------
+This is used to roughly match some string in my database.
+
+LIKE becomes powerful when combined with % and _
+
+% --> Can match any character.
+
+_ --> Can match any symbol character.
+
+Example:
+--------
+sqlite> SELECT "title" FROM "longlist" WHERE "title" LIKE '%love%'; --> Will match anything that has love before or after.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
