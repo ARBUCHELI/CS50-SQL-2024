@@ -145,6 +145,104 @@ Example:
 --------
 sqlite> SELECT "title" FROM "longlist" WHERE "title" LIKE '%love%'; --> Will match anything that has love before or after.
 
+Love in the Big City
+More Than I Love My Life
+Love in the New Millenium
+Die, My Love
+
+sqlite> SELECT "title" FROM "longlist" WHERE "title" LIKE 'The%'; --> Will match all the books that start with The, but would match also titles like They, or There.
+
+Fixing the example:
+
+sqlite> SELECT "title" FROM "longlist" WHERE "title" LIKE 'The %';
+
+sqlite> SELECT "title" FROM "longlist" WHERE "title" LIKE 'The%love%'; --> Will match all the books that start with The, and after that any character, and love at some point of the title.
+
+sqlite> SELECT "title" FROM "longlist" WHERE "title" LIKE 'P_re'; --> It will match any single character after P.
+
+Pyre
+Pere
+
+sqlite> SELECT "title" FROM "longlist" WHERE "title" LIKE 'T___'; --> It will match any title that starts with T and any individual next three characters
+
+Tyll
+
+That probes that we can use multiple underscores.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* RANGES
+--------
+In order to explain this, lets make first an example that is not well desined:
+
+sqlite> SELECT "title", "year" FROM "longlist" WHERE "year" = 2019 OR "year" = 2020 OR "year" = 2021 OR "year" = 2022;
+
+We can use the following symbols to build ranges in our queries:
+
+>
+<
+>=
+<=
+
+sqlite> SELECT "title", "year" FROM "longlist" WHERE "year" >= 2019 AND "year" <= 2022; --> This produces the same result
+
+But we still can improve the query using the BETWEEN keyword.
+
+BETWEEN ... AND ...
+
+sqlite> SELECT "title", "year" FROM "longlist" WHERE "year" BETWEEN 2019 AND 2022;
+
+sqlite> SELECT "title", "rating" FROM "longlist" WHERE "rating" > 4.0;
+
+It is even possible to combine different columns:
+
+sqlite> SELECT "title", "rating" FROM "longlist" WHERE "rating" > 4.0 AND "votes" > 10000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
